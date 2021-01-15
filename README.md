@@ -9,5 +9,5 @@ Project to organize and maintain my Raspberry pi's.
 6. Reboot the device. 
 7. Run './scripts/post_first_boot.sh'
 8. Run './scripts/install_pkgs.sh'
-9. Run './scripts/install_services.sh'
+9. Run './scripts/install_tools-services.sh'
  

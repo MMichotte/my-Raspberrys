@@ -1,0 +1,1 @@
+see : https://howchoo.com/g/ote2mjkzzta/control-raspberry-pi-fan-temperature-python
