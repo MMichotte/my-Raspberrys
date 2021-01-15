@@ -1,0 +1,115 @@
+accessControl:
+    salt: uHqhu3PvO6pxwPftguZEf6smQfUd2qI6
+api:
+    key: 18ED4B56BF3B460CB46E460F361A834C
+appearance:
+    color: green
+    name: Martin's Anet A8
+events:
+    enabled: true
+    subscriptions:
+    -   command: /home/pi/.octoprint/scripts/printerCommands.sh Loff
+        event: Startup
+        type: system
+    -   command: /home/pi/.octoprint/scripts/printerCommands.sh Lon
+        event: PrintStarted
+        type: system
+    -   command: /home/pi/.octoprint/scripts/printerCommands.sh Loff
+        event: PrintFailed
+        type: system
+    -   command: /home/pi/.octoprint/scripts/printerCommands.sh Loff
+        event: PrintCancelled
+        type: system
+    -   command:
+        - /home/pi/.octoprint/scripts/printerCommands.sh Loff
+        - /home/pi/.octoprint/scripts/printerCommands.sh Poff
+        event: PrintDone
+        type: system
+plugins:
+    announcements:
+        _config_version: 1
+        channels:
+            _blog:
+                read_until: 1585659600
+            _important:
+                read_until: 1521111600
+            _octopi:
+                read_until: 1573722900
+            _plugins:
+                read_until: 1585612800
+            _releases:
+                read_until: 1583322300
+    discovery:
+        upnpUuid: f4ac1105-4d85-43d8-aade-b38472960334
+    errortracking:
+        unique_id: 934df4d7-b51d-4d2b-85f2-c406bf47cab6
+    octopod:
+        _config_version: 8
+        bed_low: '0'
+        bed_target_temp_hold: '0'
+        pause_interval: '0'
+        tokens:
+        -   apnsToken: 7D8A567785939430AC234E724C356618B2948C032655AC5EBFC939D10DD6A780
+            date: 2020-03-31 16:18:47.163242
+            deviceName: MMichotte
+            languageCode: en
+            printerID: x-coredata://581CA698-9EAE-4F80-B629-DE66B8BF1A0F/Printer/p1
+            printerName: Anet A8
+        -   apnsToken: 3A89439EE5DACB6EF9DA80B92ACD5762DAF81441ED4A3DEBF92D299F77032E9B
+            date: 2020-03-31 16:46:24.810517
+            deviceName: Bernard Michotte
+            languageCode: fr
+            printerID: x-coredata://EB95CB1E-B441-4978-ABEF-D24C606898C9/Printer/p1
+            printerName: Anet A8
+    softwareupdate:
+        _config_version: 7
+    tracking:
+        enabled: true
+        unique_id: c08b7750-0a63-4182-b17f-32f2a12e232b
+printerProfiles:
+    default: _default
+serial:
+    baudrate: 115200
+    port: /dev/ttyUSB0
+server:
+    commands:
+        serverRestartCommand: sudo service octoprint restart
+        systemRestartCommand: sudo shutdown -r now
+        systemShutdownCommand: sudo shutdown -h now
+    firstRun: false
+    onlineCheck:
+        enabled: true
+    pluginBlacklist:
+        enabled: true
+    secretKey: dAmzhXv5BWTMq4u2OanHN1SJjm2gC3kF
+    seenWizards:
+        corewizard: 3
+        tracking: null
+system:
+    actions:
+    -   action: pon
+        command: /home/pi/.octoprint/scripts/printerCommands.sh Pon; /home/pi/.octoprint/scripts/printerCommands.sh Ns 0
+        name: Printer On
+    -   action: ponKeep
+        command: /home/pi/.octoprint/scripts/printerCommands.sh Pon; /home/pi/.octoprint/scripts/printerCommands.sh Ns 1
+        name: Printer On (no shut - hold temp)
+    -   action: poff
+        command: /home/pi/.octoprint/scripts/printerCommands.sh Poff f
+        confirm: Are you sure you want to turn off the printer?
+        name: Printer Off
+    -   action: lon
+        command: /home/pi/.octoprint/scripts/printerCommands.sh Lon
+        name: Light On
+    -   action: loff
+        command: /home/pi/.octoprint/scripts/printerCommands.sh Loff
+        name: Light Off
+temperature:
+    profiles:
+    -   bed: 55
+        chamber: null
+        extruder: 220
+        name: PLA
+    -   bed: 80
+        chamber: null
+        extruder: 240
+        name: ABS
