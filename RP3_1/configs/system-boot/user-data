@@ -24,7 +24,7 @@ users:
     lock-passwd: false
     gecos: Martin Michotte
     primary_group: martin
-    groups: adm, dialout, cdrom, floppy, sudo, audio, dip, video, plugdev, netdev, lxd
+    groups: adm, dialout, cdrom, floppy, sudo, audio, dip, video, plugdev, netdev, lxd, tty
     shell: /bin/bash
     ssh_pwauth: true
     ssh_authorized_keys: 

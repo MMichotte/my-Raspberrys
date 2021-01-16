@@ -23,7 +23,7 @@ then
     gpio export 23 out #printer
     gpio -g write 23 0
     #sleep 10
-    #sh /home/pi/.octoprint/scripts/api/connect.sh
+    #sh /home/martin/services/OctoPrint/api/connect.sh
 fi
 
 # set NOSHUT variable 
@@ -31,10 +31,10 @@ if [ $1 == Ns ];
 then
     if [ $2 == 0 ];
     then
-        echo 0 > /home/pi/.octoprint/scripts/noShut.var
+        echo 0 > /home/martin/services/OctoPrint/scripts/noShut.var
     elif [ $2 == 1 ];
     then
-        echo 1 > /home/pi/.octoprint/scripts/noShut.var
+        echo 1 > /home/martin/services/OctoPrint/scripts/noShut.var
     fi
 fi
 
@@ -47,6 +47,6 @@ then
         gpio export 23 out #printer
         gpio -g write 23 1
     else
-        sh /home/pi/.octoprint/scripts/api/setTemp.sh
+        sh /home/martin/services/OctoPrint/api/setTemp.sh
     fi
 fi

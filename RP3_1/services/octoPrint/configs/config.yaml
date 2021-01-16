@@ -8,21 +8,21 @@ appearance:
 events:
     enabled: true
     subscriptions:
-    -   command: /home/pi/.octoprint/scripts/printerCommands.sh Loff
+    -   command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Loff
         event: Startup
         type: system
-    -   command: /home/pi/.octoprint/scripts/printerCommands.sh Lon
+    -   command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Lon
         event: PrintStarted
         type: system
-    -   command: /home/pi/.octoprint/scripts/printerCommands.sh Loff
+    -   command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Loff
         event: PrintFailed
         type: system
-    -   command: /home/pi/.octoprint/scripts/printerCommands.sh Loff
+    -   command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Loff
         event: PrintCancelled
         type: system
     -   command:
-        - /home/pi/.octoprint/scripts/printerCommands.sh Loff
-        - /home/pi/.octoprint/scripts/printerCommands.sh Poff
+        - /home/martin/services/OctoPrint/scripts/printerCommands.sh Loff
+        - /home/martin/services/OctoPrint/scripts/printerCommands.sh Poff
         event: PrintDone
         type: system
 plugins:
@@ -88,20 +88,20 @@ server:
 system:
     actions:
     -   action: pon
-        command: /home/pi/.octoprint/scripts/printerCommands.sh Pon; /home/pi/.octoprint/scripts/printerCommands.sh Ns 0
+        command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Pon; /home/martin/services/OctoPrint/scripts/printerCommands.sh Ns 0
         name: Printer On
     -   action: ponKeep
-        command: /home/pi/.octoprint/scripts/printerCommands.sh Pon; /home/pi/.octoprint/scripts/printerCommands.sh Ns 1
+        command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Pon; /home/martin/services/OctoPrint/scripts/printerCommands.sh Ns 1
         name: Printer On (no shut - hold temp)
     -   action: poff
-        command: /home/pi/.octoprint/scripts/printerCommands.sh Poff f
+        command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Poff f
         confirm: Are you sure you want to turn off the printer?
         name: Printer Off
     -   action: lon
-        command: /home/pi/.octoprint/scripts/printerCommands.sh Lon
+        command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Lon
         name: Light On
     -   action: loff
-        command: /home/pi/.octoprint/scripts/printerCommands.sh Loff
+        command: /home/martin/services/OctoPrint/scripts/printerCommands.sh Loff
         name: Light Off
 temperature:
     profiles:
